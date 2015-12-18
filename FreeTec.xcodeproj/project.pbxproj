@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B2FA84A1598A5BEEA479C5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD4D9CB1DA74E8B7D90190 /* libPods.a */; };
+		F5169F511C24C417000D2260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F501C24C417000D2260 /* main.m */; };
+		F5169F541C24C417000D2260 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F531C24C417000D2260 /* AppDelegate.m */; };
+		F5169F571C24C417000D2260 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F561C24C417000D2260 /* ViewController.m */; };
+		F5169F5A1C24C417000D2260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5169F581C24C417000D2260 /* Main.storyboard */; };
+		F5169F5D1C24C417000D2260 /* FreeTec.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5169F5B1C24C417000D2260 /* FreeTec.xcdatamodeld */; };
+		F5169F5F1C24C417000D2260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5169F5E1C24C417000D2260 /* Assets.xcassets */; };
+		F5169F621C24C417000D2260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5169F601C24C417000D2260 /* LaunchScreen.storyboard */; };
+		F5169F6D1C24C417000D2260 /* FreeTecTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F6C1C24C417000D2260 /* FreeTecTests.m */; };
+		F5169F781C24C417000D2260 /* FreeTecUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F771C24C417000D2260 /* FreeTecUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5169F691C24C417000D2260 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5169F441C24C417000D2260 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5169F4B1C24C417000D2260;
+			remoteInfo = FreeTec;
+		};
+		F5169F741C24C417000D2260 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5169F441C24C417000D2260 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5169F4B1C24C417000D2260;
+			remoteInfo = FreeTec;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F23852654ACF9A47DE8A17C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		87AD4D9CB1DA74E8B7D90190 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B970558CE1FFC49309124B9E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F5169F4C1C24C417000D2260 /* FreeTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5169F501C24C417000D2260 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5169F521C24C417000D2260 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5169F531C24C417000D2260 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5169F551C24C417000D2260 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F5169F561C24C417000D2260 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5169F591C24C417000D2260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5169F5C1C24C417000D2260 /* FreeTec.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FreeTec.xcdatamodel; sourceTree = "<group>"; };
+		F5169F5E1C24C417000D2260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5169F611C24C417000D2260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5169F631C24C417000D2260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5169F681C24C417000D2260 /* FreeTecTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeTecTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5169F6C1C24C417000D2260 /* FreeTecTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeTecTests.m; sourceTree = "<group>"; };
+		F5169F6E1C24C417000D2260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5169F731C24C417000D2260 /* FreeTecUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeTecUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5169F771C24C417000D2260 /* FreeTecUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeTecUITests.m; sourceTree = "<group>"; };
+		F5169F791C24C417000D2260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5169F491C24C417000D2260 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2FA84A1598A5BEEA479C5B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5169F651C24C417000D2260 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5169F701C24C417000D2260 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18D87CFB31D6F781A92CC031 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F23852654ACF9A47DE8A17C /* Pods.debug.xcconfig */,
+				B970558CE1FFC49309124B9E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1BEB312BA7515756B63F22F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87AD4D9CB1DA74E8B7D90190 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5169F431C24C417000D2260 = {
+			isa = PBXGroup;
+			children = (
+				F5169F4E1C24C417000D2260 /* FreeTec */,
+				F5169F6B1C24C417000D2260 /* FreeTecTests */,
+				F5169F761C24C417000D2260 /* FreeTecUITests */,
+				F5169F4D1C24C417000D2260 /* Products */,
+				18D87CFB31D6F781A92CC031 /* Pods */,
+				B1BEB312BA7515756B63F22F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5169F4D1C24C417000D2260 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5169F4C1C24C417000D2260 /* FreeTec.app */,
+				F5169F681C24C417000D2260 /* FreeTecTests.xctest */,
+				F5169F731C24C417000D2260 /* FreeTecUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5169F4E1C24C417000D2260 /* FreeTec */ = {
+			isa = PBXGroup;
+			children = (
+				F5169F521C24C417000D2260 /* AppDelegate.h */,
+				F5169F531C24C417000D2260 /* AppDelegate.m */,
+				F5169F551C24C417000D2260 /* ViewController.h */,
+				F5169F561C24C417000D2260 /* ViewController.m */,
+				F5169F581C24C417000D2260 /* Main.storyboard */,
+				F5169F5E1C24C417000D2260 /* Assets.xcassets */,
+				F5169F601C24C417000D2260 /* LaunchScreen.storyboard */,
+				F5169F631C24C417000D2260 /* Info.plist */,
+				F5169F5B1C24C417000D2260 /* FreeTec.xcdatamodeld */,
+				F5169F4F1C24C417000D2260 /* Supporting Files */,
+			);
+			path = FreeTec;
+			sourceTree = "<group>";
+		};
+		F5169F4F1C24C417000D2260 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5169F501C24C417000D2260 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5169F6B1C24C417000D2260 /* FreeTecTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5169F6C1C24C417000D2260 /* FreeTecTests.m */,
+				F5169F6E1C24C417000D2260 /* Info.plist */,
+			);
+			path = FreeTecTests;
+			sourceTree = "<group>";
+		};
+		F5169F761C24C417000D2260 /* FreeTecUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5169F771C24C417000D2260 /* FreeTecUITests.m */,
+				F5169F791C24C417000D2260 /* Info.plist */,
+			);
+			path = FreeTecUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5169F4B1C24C417000D2260 /* FreeTec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5169F7C1C24C417000D2260 /* Build configuration list for PBXNativeTarget "FreeTec" */;
+			buildPhases = (
+				086A4C8DAFE05732CA85F8A1 /* Check Pods Manifest.lock */,
+				F5169F481C24C417000D2260 /* Sources */,
+				F5169F491C24C417000D2260 /* Frameworks */,
+				F5169F4A1C24C417000D2260 /* Resources */,
+				26CAE6233306993801D6779A /* Embed Pods Frameworks */,
+				530C4C5DE5792E23334A6F5B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeTec;
+			productName = FreeTec;
+			productReference = F5169F4C1C24C417000D2260 /* FreeTec.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5169F671C24C417000D2260 /* FreeTecTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5169F7F1C24C417000D2260 /* Build configuration list for PBXNativeTarget "FreeTecTests" */;
+			buildPhases = (
+				F5169F641C24C417000D2260 /* Sources */,
+				F5169F651C24C417000D2260 /* Frameworks */,
+				F5169F661C24C417000D2260 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5169F6A1C24C417000D2260 /* PBXTargetDependency */,
+			);
+			name = FreeTecTests;
+			productName = FreeTecTests;
+			productReference = F5169F681C24C417000D2260 /* FreeTecTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5169F721C24C417000D2260 /* FreeTecUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5169F821C24C417000D2260 /* Build configuration list for PBXNativeTarget "FreeTecUITests" */;
+			buildPhases = (
+				F5169F6F1C24C417000D2260 /* Sources */,
+				F5169F701C24C417000D2260 /* Frameworks */,
+				F5169F711C24C417000D2260 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5169F751C24C417000D2260 /* PBXTargetDependency */,
+			);
+			name = FreeTecUITests;
+			productName = FreeTecUITests;
+			productReference = F5169F731C24C417000D2260 /* FreeTecUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5169F441C24C417000D2260 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Tiago Pinheiro";
+				TargetAttributes = {
+					F5169F4B1C24C417000D2260 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					F5169F671C24C417000D2260 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F5169F4B1C24C417000D2260;
+					};
+					F5169F721C24C417000D2260 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F5169F4B1C24C417000D2260;
+					};
+				};
+			};
+			buildConfigurationList = F5169F471C24C417000D2260 /* Build configuration list for PBXProject "FreeTec" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5169F431C24C417000D2260;
+			productRefGroup = F5169F4D1C24C417000D2260 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5169F4B1C24C417000D2260 /* FreeTec */,
+				F5169F671C24C417000D2260 /* FreeTecTests */,
+				F5169F721C24C417000D2260 /* FreeTecUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5169F4A1C24C417000D2260 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5169F621C24C417000D2260 /* LaunchScreen.storyboard in Resources */,
+				F5169F5F1C24C417000D2260 /* Assets.xcassets in Resources */,
+				F5169F5A1C24C417000D2260 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5169F661C24C417000D2260 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5169F711C24C417000D2260 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		086A4C8DAFE05732CA85F8A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		26CAE6233306993801D6779A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		530C4C5DE5792E23334A6F5B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5169F481C24C417000D2260 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5169F571C24C417000D2260 /* ViewController.m in Sources */,
+				F5169F541C24C417000D2260 /* AppDelegate.m in Sources */,
+				F5169F5D1C24C417000D2260 /* FreeTec.xcdatamodeld in Sources */,
+				F5169F511C24C417000D2260 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5169F641C24C417000D2260 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5169F6D1C24C417000D2260 /* FreeTecTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5169F6F1C24C417000D2260 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5169F781C24C417000D2260 /* FreeTecUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5169F6A1C24C417000D2260 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5169F4B1C24C417000D2260 /* FreeTec */;
+			targetProxy = F5169F691C24C417000D2260 /* PBXContainerItemProxy */;
+		};
+		F5169F751C24C417000D2260 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5169F4B1C24C417000D2260 /* FreeTec */;
+			targetProxy = F5169F741C24C417000D2260 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5169F581C24C417000D2260 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5169F591C24C417000D2260 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5169F601C24C417000D2260 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5169F611C24C417000D2260 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5169F7A1C24C417000D2260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F5169F7B1C24C417000D2260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5169F7D1C24C417000D2260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F23852654ACF9A47DE8A17C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FreeTec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5169F7E1C24C417000D2260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B970558CE1FFC49309124B9E /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FreeTec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5169F801C24C417000D2260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FreeTecTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTecTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTec.app/FreeTec";
+			};
+			name = Debug;
+		};
+		F5169F811C24C417000D2260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FreeTecTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTecTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeTec.app/FreeTec";
+			};
+			name = Release;
+		};
+		F5169F831C24C417000D2260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FreeTecUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTecUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FreeTec;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F5169F841C24C417000D2260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FreeTecUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTecUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FreeTec;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5169F471C24C417000D2260 /* Build configuration list for PBXProject "FreeTec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5169F7A1C24C417000D2260 /* Debug */,
+				F5169F7B1C24C417000D2260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5169F7C1C24C417000D2260 /* Build configuration list for PBXNativeTarget "FreeTec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5169F7D1C24C417000D2260 /* Debug */,
+				F5169F7E1C24C417000D2260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5169F7F1C24C417000D2260 /* Build configuration list for PBXNativeTarget "FreeTecTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5169F801C24C417000D2260 /* Debug */,
+				F5169F811C24C417000D2260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5169F821C24C417000D2260 /* Build configuration list for PBXNativeTarget "FreeTecUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5169F831C24C417000D2260 /* Debug */,
+				F5169F841C24C417000D2260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F5169F5B1C24C417000D2260 /* FreeTec.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F5169F5C1C24C417000D2260 /* FreeTec.xcdatamodel */,
+			);
+			currentVersion = F5169F5C1C24C417000D2260 /* FreeTec.xcdatamodel */;
+			path = FreeTec.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F5169F441C24C417000D2260 /* Project object */;
+}
