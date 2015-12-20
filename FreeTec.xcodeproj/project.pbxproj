@@ -17,6 +17,12 @@
 		F5169F621C24C417000D2260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5169F601C24C417000D2260 /* LaunchScreen.storyboard */; };
 		F5169F6D1C24C417000D2260 /* FreeTecTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F6C1C24C417000D2260 /* FreeTecTests.m */; };
 		F5169F781C24C417000D2260 /* FreeTecUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F771C24C417000D2260 /* FreeTecUITests.m */; };
+		F5169F881C24CF8E000D2260 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5169F871C24CF8E000D2260 /* MobileCoreServices.framework */; };
+		F5169F8A1C24CFBD000D2260 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5169F891C24CFBD000D2260 /* PassKit.framework */; };
+		F5169F8E1C24D0F9000D2260 /* CellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F8D1C24D0F9000D2260 /* CellTableView.m */; };
+		F53F55BE1C275D7F00A440EF /* CWSBrasilValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F55BD1C275D7F00A440EF /* CWSBrasilValidate.m */; };
+		F5B7E4D51C2586690047F42C /* CellColletionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B7E4D41C2586690047F42C /* CellColletionView.m */; };
+		F5B7E4D81C26EC850047F42C /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B7E4D71C26EC850047F42C /* loginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,17 @@
 		F5169F731C24C417000D2260 /* FreeTecUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeTecUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5169F771C24C417000D2260 /* FreeTecUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeTecUITests.m; sourceTree = "<group>"; };
 		F5169F791C24C417000D2260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5169F871C24CF8E000D2260 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F5169F891C24CFBD000D2260 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		F5169F8B1C24CFBD000D2260 /* FreeTec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FreeTec.entitlements; sourceTree = "<group>"; };
+		F5169F8C1C24D0F9000D2260 /* CellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTableView.h; sourceTree = "<group>"; };
+		F5169F8D1C24D0F9000D2260 /* CellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTableView.m; sourceTree = "<group>"; };
+		F53F55BC1C275D7F00A440EF /* CWSBrasilValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSBrasilValidate.h; sourceTree = "<group>"; };
+		F53F55BD1C275D7F00A440EF /* CWSBrasilValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSBrasilValidate.m; sourceTree = "<group>"; };
+		F5B7E4D31C2586690047F42C /* CellColletionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellColletionView.h; sourceTree = "<group>"; };
+		F5B7E4D41C2586690047F42C /* CellColletionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellColletionView.m; sourceTree = "<group>"; };
+		F5B7E4D61C26EC850047F42C /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		F5B7E4D71C26EC850047F42C /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5169F8A1C24CFBD000D2260 /* PassKit.framework in Frameworks */,
+				F5169F881C24CF8E000D2260 /* MobileCoreServices.framework in Frameworks */,
 				4B2FA84A1598A5BEEA479C5B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +116,8 @@
 		B1BEB312BA7515756B63F22F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5169F891C24CFBD000D2260 /* PassKit.framework */,
+				F5169F871C24CF8E000D2260 /* MobileCoreServices.framework */,
 				87AD4D9CB1DA74E8B7D90190 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -127,6 +148,9 @@
 		F5169F4E1C24C417000D2260 /* FreeTec */ = {
 			isa = PBXGroup;
 			children = (
+				F53F55BC1C275D7F00A440EF /* CWSBrasilValidate.h */,
+				F53F55BD1C275D7F00A440EF /* CWSBrasilValidate.m */,
+				F5169F8B1C24CFBD000D2260 /* FreeTec.entitlements */,
 				F5169F521C24C417000D2260 /* AppDelegate.h */,
 				F5169F531C24C417000D2260 /* AppDelegate.m */,
 				F5169F551C24C417000D2260 /* ViewController.h */,
@@ -137,6 +161,12 @@
 				F5169F631C24C417000D2260 /* Info.plist */,
 				F5169F5B1C24C417000D2260 /* FreeTec.xcdatamodeld */,
 				F5169F4F1C24C417000D2260 /* Supporting Files */,
+				F5169F8C1C24D0F9000D2260 /* CellTableView.h */,
+				F5169F8D1C24D0F9000D2260 /* CellTableView.m */,
+				F5B7E4D31C2586690047F42C /* CellColletionView.h */,
+				F5B7E4D41C2586690047F42C /* CellColletionView.m */,
+				F5B7E4D61C26EC850047F42C /* loginViewController.h */,
+				F5B7E4D71C26EC850047F42C /* loginViewController.m */,
 			);
 			path = FreeTec;
 			sourceTree = "<group>";
@@ -237,6 +267,15 @@
 				TargetAttributes = {
 					F5169F4B1C24C417000D2260 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 82K3TLE3Z9;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Wallet = {
+								enabled = 1;
+							};
+						};
 					};
 					F5169F671C24C417000D2260 = {
 						CreatedOnToolsVersion = 7.2;
@@ -350,7 +389,11 @@
 			files = (
 				F5169F571C24C417000D2260 /* ViewController.m in Sources */,
 				F5169F541C24C417000D2260 /* AppDelegate.m in Sources */,
+				F53F55BE1C275D7F00A440EF /* CWSBrasilValidate.m in Sources */,
+				F5169F8E1C24D0F9000D2260 /* CellTableView.m in Sources */,
+				F5B7E4D81C26EC850047F42C /* loginViewController.m in Sources */,
 				F5169F5D1C24C417000D2260 /* FreeTec.xcdatamodeld in Sources */,
+				F5B7E4D51C2586690047F42C /* CellColletionView.m in Sources */,
 				F5169F511C24C417000D2260 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,10 +534,14 @@
 			baseConfigurationReference = 5F23852654ACF9A47DE8A17C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FreeTec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -503,10 +550,14 @@
 			baseConfigurationReference = B970558CE1FFC49309124B9E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FreeTec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

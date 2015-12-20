@@ -19,8 +19,44 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>VMaskTextField-VMaskTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>VMaskTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>2F4389DA05DC2F1F66C8EE43FBBE4913</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>573FE6DC3C84168B50B4D7FA79407C97</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ECC24C52B046E7C4BB0EF844074E214</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
