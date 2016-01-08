@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"Got Didload");
+    
     self.textCpf.mask = @"###.###.###-##";
     self.textCpf.delegate = self;
     self.textTelefone.delegate = self;
@@ -37,6 +39,8 @@
     NSLog(@"cpf log will-%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"]);
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"] !=nil) {
         
+        [self sendPushkey];
+        
         ViewController * view = [self.storyboard instantiateViewControllerWithIdentifier:@"Principal"];
         view.CpfUser = [[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"];
         
@@ -44,6 +48,11 @@
         [self presentViewController:view animated:YES completion:^{
             ;
         }];
+        
+    }else{
+        NSLog(@"Entrar no push");
+        
+        [self sendPushkey];
         
     }
 
@@ -80,6 +89,7 @@
         
         [[NSUserDefaults standardUserDefaults] setValue:self.textCpf.text forKey:@"cpfuser"];
         
+        [self sendPushkey];
         
         [self presentViewController:view animated:YES completion:^{
             ;
@@ -102,14 +112,9 @@
     
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
-    [textField resignFirstResponder];
-    
-    return true;
-    
-}
+
 - (IBAction)bntCadastro:(id)sender {
+    
     
     NSString *strcpf = self.textCpf.text;
     
@@ -156,6 +161,7 @@
                     
                     [[NSUserDefaults standardUserDefaults] setValue:self.textCpf.text forKey:@"cpfuser"];
                     
+                    [self sendPushkey];
                     
                     [self presentViewController:view animated:YES completion:^{
                         ;
@@ -226,18 +232,96 @@
     
 }
 
+-(BOOL) checkCampos{
+    
+    
+    return (([self.textNome.text isEqualToString:@""]) ?  false :
+            (([self.textEmail.text isEqualToString:@""]) ?  false :
+             (([self.textTelefone.text isEqualToString:@""]) ?  false :
+              true)));
+    
+    return true;
+    
+}
+
 -(void) cancelHud{
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     
 }
 
--(BOOL) checkCampos{
+
+
+
+
+-(void) sendPushkey{
     
     
-    return (([self.textNome.text isEqualToString:@""]) ?  false :
-     (([self.textEmail.text isEqualToString:@""]) ?  false :
-      (([self.textTelefone.text isEqualToString:@""]) ?  false :
-        true)));
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"keyNotification"] !=nil){
+        
+        NSLog(@"Push: %@",[[NSUserDefaults standardUserDefaults] stringForKey:@"keyNotification"]);
+        
+        
+        AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager  manager];
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+        
+        NSString * strcpf;
+        if([[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"] ==nil)
+            strcpf = @"";
+        else
+            strcpf =[[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"];
+        
+        NSDictionary * params = @{@"cpf":strcpf,
+                                  @"KEY_PUSH":[[NSUserDefaults standardUserDefaults] stringForKey:@"keyNotification"]
+                                  };
+        [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroKeyIosFreetec.php" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+            NSLog(@"4");
+            
+            //NSString* str = [NSString stringWithUTF8String:[responseObject cStringUsingEncoding:NSUTF8StringEncoding]];
+            
+            
+            
+            // responseObject;
+            
+            NSLog(@"JSON: %@ ",responseObject);
+            
+            
+            
+            
+            
+        } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+            NSLog(@"Erro: %@",error);
+            
+            
+        }];
+    }
+    
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    //Keyboard becomes visible
+    
+    
+    [self.viewPromary setContentOffset:CGPointMake(0, 120) animated:YES];
+    
+    
+    
+    
+    
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    
+    
+
+    
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    //NSLog(@"entrou");
+    [self.viewPromary setContentOffset:CGPointMake(0, 0) animated:YES];
+    //self.viewPromary.contentSize = CGSizeMake(320,self.viewHeitght);
+    
+    [textField resignFirstResponder];
     
     return true;
     

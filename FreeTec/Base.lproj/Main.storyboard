@@ -322,7 +322,7 @@
                         <viewControllerLayoutGuide type="top" id="139-cu-odi"/>
                         <viewControllerLayoutGuide type="bottom" id="yM5-vO-pC3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xVr-vR-O3O">
+                    <view key="view" contentMode="scaleToFill" id="xVr-vR-O3O" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -500,6 +500,7 @@
                         <outlet property="textEmail" destination="79z-5f-rrh" id="DNa-OM-SwM"/>
                         <outlet property="textNome" destination="stG-VZ-4qx" id="qkE-yd-co7"/>
                         <outlet property="textTelefone" destination="lcc-rj-pFV" id="adE-Ha-1IF"/>
+                        <outlet property="viewPromary" destination="xVr-vR-O3O" id="6zY-85-A2G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Km-qj-0rh" userLabel="First Responder" sceneMemberID="firstResponder"/>

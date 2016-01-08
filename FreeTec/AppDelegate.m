@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import <unistd.h>
 @interface AppDelegate ()
+
+@property NSString * push_token;
 
 @end
 
@@ -18,7 +19,39 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //[NSThread sleepForTimeInterval:5.0];
+    
+    UIUserNotificationType types = UIUserNotificationTypeBadge |
+    UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *mySettings =
+    [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+    NSLog(@"Got Delegator");
+    
     return true;
+}
+
+- (void)application:(UIApplication *)app
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
+    
+    NSLog(@"Got device token1: %@", [devToken description]);
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[devToken description] forKey:@"keyNotification"];
+    NSLog(@"Key %@",[[NSUserDefaults standardUserDefaults] stringForKey:@"keyNotification"]);
+    NSLog(@"Got device token2: %@", devToken);
+    
+
+}
+
+- (void)application:(UIApplication *)app
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    NSLog(@"Error in registration. Error: %@", err);
+}
+
+-(void) sendProviderDeviceToken:(NSString *)devTokenBytes{
+
 }
 
 

@@ -18,5 +18,7 @@
 @property (strong, nonatomic) IBOutlet VMaskTextField *textNome;
 @property (strong, nonatomic) IBOutlet VMaskTextField *textTelefone;
 @property (strong, nonatomic) IBOutlet VMaskTextField *textEmail;
+@property (strong, nonatomic) IBOutlet UIScrollView *viewPromary;
+@property BOOL  scrollActive;
 
 @end
