@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MBProgressHUD.xcscheme</key>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FreeTecWATCH Extension-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FreeTecWATCH Extension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,22 +42,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F4389DA05DC2F1F66C8EE43FBBE4913</key>
+		<key>3B8E347DF3769583074413E8C44BD0F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<key>8897D59A260D405A2543517F506E3B12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>573FE6DC3C84168B50B4D7FA79407C97</key>
+		<key>A25B8D23B47C2B06061EBD12CED85C5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9ECC24C52B046E7C4BB0EF844074E214</key>
+		<key>BF68E8CA24B5174C0F36DEE3608DADE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC0B7C4BE28D479CA7A0FEB188EF5DBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8D8A69AE19127FCFB46818D70EBE623</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -13,7 +13,9 @@
 
 #import "CellColletionView.h"
 
-@interface ViewController ()
+#import <WatchConnectivity/WatchConnectivity.h>
+
+@interface ViewController ()<WCSessionDelegate>
 
 @end
 
@@ -27,7 +29,11 @@
     [self getDados];
     
     self.view_Inscricao_Win.layer.cornerRadius = 10;
-    
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
     
     
     
@@ -213,10 +219,13 @@
     self.hud.mode = MBProgressHUDModeIndeterminate;
     //hub.mode = MBProgressHUDModeText;
     self.hud.labelText = @"Recebendo dados!";
+    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy.allowInvalidCertificates = YES;
     
-    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager  manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
-    [manager GET:@"http://unibratec.edu.br/freetec2016/agendaFreetec_ios.php" parameters:@{@"CPF_INSCRITO":self.CpfUser} success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager GET:@"http://unibratec.edu.br/freetec2016/agendaFreetec_ios.php" parameters:@{@"CPF_INSCRITO":self.CpfUser} progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
         //NSString* str = [NSString stringWithUTF8String:[responseObject cStringUsingEncoding:NSUTF8StringEncoding]];
@@ -232,29 +241,30 @@
         
         
         self.allDay = [self.jRetorno valueForKeyPath:@"@distinctUnionOfObjects.dataHora"];
-       
+        
         
         self.allDay =
         [self.allDay sortedArrayUsingSelector:@selector(compare:)];
         
         
-       // NSLog(@"JSON: %@ - %lu",self.allDay,(unsigned long)self.allDay.count);
+        // NSLog(@"JSON: %@ - %lu",self.allDay,(unsigned long)self.allDay.count);
         
         
         //[self reloadAllpin];
         [self.collectionView reloadData];
         [self.tableview reloadData];
+        [[WCSession defaultSession] sendMessage:@{@"pushInfo":@""} replyHandler:^(NSDictionary *reply) {
+        } errorHandler:^(NSError * _Nonnull error) {
+        }];
+        
         
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         
         
-        
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Erro: %@",error);
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        
     }];
-    
     
 }
 - (IBAction)bntLogin:(id)sender {
@@ -355,18 +365,20 @@
     self.hud.mode = MBProgressHUDModeIndeterminate;
     //hub.mode = MBProgressHUDModeText;
     self.hud.labelText = @"Efetuando Alteração!";
+    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy.allowInvalidCertificates = YES;
     
-    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager  manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     
     NSDictionary * params = @{@"cpf":self.CpfUser,
                               @"confirmUpdHorario":update,
                               @"curso_codigo":self.insc_idCurso,
                               @"horario_codigo":self.insc_idHorario};
-    
-    [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroFreetec_mobile.php" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroFreetec_mobile.php" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
         
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //NSString* str = [NSString stringWithUTF8String:[responseObject cStringUsingEncoding:NSUTF8StringEncoding]];
         
         
@@ -402,18 +414,105 @@
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         
         
-        
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Erro: %@",error);
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-        
     }];
+    
     
     
 }
 
 
+// Function Watch
 
+- (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message replyHandler:(void(^)(NSDictionary<NSString *, id> *replyMessage))replyHandler{
+    
+    if ([message[@"action"] isEqualToString:@"LOAD"]) {
+        
+        if (self.jRetorno) {
+            if ([[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"] !=nil) {
+                
+                replyHandler(@{@"cpf":[[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"]
+                               ,@"dados":self.jRetorno});
+            }else{
+                replyHandler(@{@"cpf":@"ERRO"
+                               ,@"dados":@""});
+                
+            }
+        }
+    }
+    if ([message[@"action"] isEqualToString:@"INSCRICAO"]) {
+        
+        NSString * curso_codigo = message[@"curso_codigo"];
+        NSString * horario_codigo = message[@"horario_codigo"];
+        NSString * confirmUpdHorario = message[@"confirmUpdHorario"];
+        
+        
+        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        self.hud.mode = MBProgressHUDModeIndeterminate;
+        //hub.mode = MBProgressHUDModeText;
+        self.hud.labelText = @"Efetuando Alteração!";
+        AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+        manager.securityPolicy.allowInvalidCertificates = YES;
+        
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+        
+        NSDictionary * params = @{@"cpf":self.CpfUser,
+                                  @"confirmUpdHorario":confirmUpdHorario,
+                                  @"curso_codigo":curso_codigo,
+                                  @"horario_codigo":horario_codigo};
+        [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroFreetec_mobile.php" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            
+        } progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            //NSString* str = [NSString stringWithUTF8String:[responseObject cStringUsingEncoding:NSUTF8StringEncoding]];
+            
+            
+            
+            // responseObject;
+            
+            NSLog(@"JSON: %@ ",responseObject);
+            
+            
+            
+            
+            // NSLog(@"JSON: %@ - %lu",self.allDay,(unsigned long)self.allDay.count);
+            
+            self.labRetorno.text = responseObject[0][@"Msg"];
+            self.labRetorno.hidden = NO;
+            self.insc_Bnt.hidden = YES;
+            self.insc_bnt_Update.hidden = YES;
+            
+            if ([responseObject[0][@"status"] isEqualToString:@"000"]) {
+                
+                [self getDados];
+                
+                replyHandler(@{@"status":@"000",@"retorno":responseObject[0][@"Msg"]});
+            }
+            
+            if ([responseObject[0][@"status"] isEqualToString:@"103"]) {
+                
+                
+                self.insc_bnt_Update.hidden = NO;
+                replyHandler(@{@"status":@"103",@"retorno":responseObject[0][@"Msg"]});
+                
+            }
+            
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"Erro: %@",error);
+            replyHandler(@{@"status":@"404",@"retorno":@"ERRO CONEXÃO"});
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        }];
+        
+
+    }
+    
+}
 
 
 @end

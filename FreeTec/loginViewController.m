@@ -10,8 +10,9 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "CWSBrasilValidate.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface loginViewController ()
+@interface loginViewController ()<WCSessionDelegate>
 
 @end
 
@@ -27,15 +28,20 @@
     
     
     self.textTelefone.mask = @"(##) #####-####";
-    
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
     
     
     
     // Do any additional setup after loading the view.
 }
+
 -(void)viewDidAppear:(BOOL)animated{
-
-
+    
+    
     NSLog(@"cpf log will-%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"]);
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"] !=nil) {
         
@@ -55,7 +61,7 @@
         [self sendPushkey];
         
     }
-
+    
 }
 -(void)viewWillAppear:(BOOL)animated{
     
@@ -63,10 +69,10 @@
 }
 
 - (void)didReceiveMemoryWarning {
-
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-
+    
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
@@ -77,7 +83,7 @@
         VMaskTextField * maskTextField = (VMaskTextField*) textField;
         return  [maskTextField shouldChangeCharactersInRange:range replacementString:string];
     }
-
+    
 }
 - (IBAction)bntLogin:(id)sender {
     
@@ -91,16 +97,21 @@
         
         [self sendPushkey];
         
+        [[WCSession defaultSession] sendMessage:@{@"action":@"LOGIN"} replyHandler:^(NSDictionary *reply) {
+        } errorHandler:^(NSError * _Nonnull error) {
+        }];
+        
         [self presentViewController:view animated:YES completion:^{
             ;
         }];
         
         
-    
+        
     }
     
     
 }
+
 - (IBAction)bntIr:(id)sender {
     
     ViewController * view = [self.storyboard instantiateViewControllerWithIdentifier:@"Principal"];
@@ -108,7 +119,7 @@
     [self presentViewController:view animated:YES completion:^{
         ;
     }];
-
+    
     
 }
 
@@ -133,18 +144,20 @@
             
             //self.hud.mode = MBProgressHUDModeText;
             self.hud.labelText = @"Efetuando cadastro.";
+            AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+            manager.securityPolicy.allowInvalidCertificates = YES;
             
-            AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager  manager];
             manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
             
             NSDictionary * params = @{@"cpf":self.textCpf.text,
                                       @"nome":self.textNome.text,
                                       @"email":self.textEmail.text,
                                       @"telefone":self.textTelefone.text};
-            
-            [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroPessoaFreetec_mobile.php" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+            [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroPessoaFreetec_mobile.php" parameters:params  constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
                 
+            } progress:^(NSProgress * _Nonnull uploadProgress) {
                 
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSLog(@"Retorno: %@", responseObject);
                 
                 
@@ -183,11 +196,7 @@
                     
                     
                 }
-                
-                
-                
-                
-            } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"Erro: %@",error);
                 self.hud.labelText = @"ERRO NO CADASTRO!";
                 
@@ -197,6 +206,7 @@
                     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
                 });
             }];
+            
             
         }else{
             
@@ -227,7 +237,7 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         });
-    
+        
     };
     
 }
@@ -260,8 +270,9 @@
         
         NSLog(@"Push: %@",[[NSUserDefaults standardUserDefaults] stringForKey:@"keyNotification"]);
         
+        AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+        manager.securityPolicy.allowInvalidCertificates = YES;
         
-        AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager  manager];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
         
         NSString * strcpf;
@@ -273,7 +284,12 @@
         NSDictionary * params = @{@"cpf":strcpf,
                                   @"KEY_PUSH":[[NSUserDefaults standardUserDefaults] stringForKey:@"keyNotification"]
                                   };
-        [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroKeyIosFreetec.php" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
+        [manager POST:@"http://unibratec.edu.br/freetec2016/cadastroKeyIosFreetec.php" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            
+        } progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSLog(@"4");
             
             //NSString* str = [NSString stringWithUTF8String:[responseObject cStringUsingEncoding:NSUTF8StringEncoding]];
@@ -284,15 +300,10 @@
             
             NSLog(@"JSON: %@ ",responseObject);
             
-            
-            
-            
-            
-        } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"Erro: %@",error);
-            
-            
         }];
+        
     }
     
 }
@@ -312,7 +323,7 @@
     
     
     
-
+    
     
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -327,14 +338,54 @@
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message replyHandler:(void(^)(NSDictionary<NSString *, id> *replyMessage))replyHandler{
+    
+    if ([message[@"action"] isEqualToString:@"LOAD"]) {
+        
+        if ([[NSUserDefaults standardUserDefaults] stringForKey:@"cpfuser"]==nil) {
+            
+            
+            NSString * cpfstr;
+            
+            
+            cpfstr = @"";
+            
+            AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+            manager.securityPolicy.allowInvalidCertificates = YES;
+            
+            manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+            [manager GET:@"http://unibratec.edu.br/freetec2016/agendaFreetec_ios.php" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                
+                
+                replyHandler(@{@"cpf":@""
+                               ,@"dados":responseObject});
+                
+                
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                replyHandler(@{@"cpf":@"ERRO"
+                               ,@"dados":@""});
+                
+            }];
+            
+            
+        }
+    }
+    
+    
 }
-*/
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

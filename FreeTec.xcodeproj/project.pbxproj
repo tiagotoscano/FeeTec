@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A434BEBD09DAF6430A8ED1D /* libPods-FreeTecWATCH Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 119A12158EC570C72AE14353 /* libPods-FreeTecWATCH Extension.a */; };
 		4B2FA84A1598A5BEEA479C5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87AD4D9CB1DA74E8B7D90190 /* libPods.a */; };
+		F502BDE31C40736D006055B1 /* WKListagemController.m in Sources */ = {isa = PBXBuildFile; fileRef = F502BDE21C40736D006055B1 /* WKListagemController.m */; };
+		F502BDE61C40754A006055B1 /* ListagemRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F502BDE51C40754A006055B1 /* ListagemRow.m */; };
 		F5169F511C24C417000D2260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F501C24C417000D2260 /* main.m */; };
 		F5169F541C24C417000D2260 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F531C24C417000D2260 /* AppDelegate.m */; };
 		F5169F571C24C417000D2260 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F561C24C417000D2260 /* ViewController.m */; };
@@ -21,8 +24,19 @@
 		F5169F8A1C24CFBD000D2260 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5169F891C24CFBD000D2260 /* PassKit.framework */; };
 		F5169F8E1C24D0F9000D2260 /* CellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5169F8D1C24D0F9000D2260 /* CellTableView.m */; };
 		F53F55BE1C275D7F00A440EF /* CWSBrasilValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F55BD1C275D7F00A440EF /* CWSBrasilValidate.m */; };
+		F59D74E11C40691B002DB499 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59D74DF1C40691B002DB499 /* Interface.storyboard */; };
+		F59D74E31C40691B002DB499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59D74E21C40691B002DB499 /* Assets.xcassets */; };
+		F59D74EA1C40691C002DB499 /* FreeTecWATCH Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F59D74E91C40691C002DB499 /* FreeTecWATCH Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F59D74F21C40691C002DB499 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F59D74F11C40691C002DB499 /* InterfaceController.m */; };
+		F59D74F51C40691C002DB499 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F59D74F41C40691C002DB499 /* ExtensionDelegate.m */; };
+		F59D74F81C40691C002DB499 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F59D74F71C40691C002DB499 /* NotificationController.m */; };
+		F59D74FA1C40691C002DB499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59D74F91C40691C002DB499 /* Assets.xcassets */; };
+		F59D74FE1C40691C002DB499 /* FreeTecWATCH.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F59D74DD1C40691B002DB499 /* FreeTecWATCH.app */; };
+		F59D750B1C4069B2002DB499 /* DaysInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F59D75071C4069B2002DB499 /* DaysInterfaceController.m */; };
+		F59D750C1C4069B2002DB499 /* DaysRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F59D750A1C4069B2002DB499 /* DaysRow.m */; };
 		F5B7E4D51C2586690047F42C /* CellColletionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B7E4D41C2586690047F42C /* CellColletionView.m */; };
 		F5B7E4D81C26EC850047F42C /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B7E4D71C26EC850047F42C /* loginViewController.m */; };
+		F5E338A21C417C2F00625F40 /* DetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E338A11C417C2F00625F40 /* DetailInterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +54,73 @@
 			remoteGlobalIDString = F5169F4B1C24C417000D2260;
 			remoteInfo = FreeTec;
 		};
+		F59D74EB1C40691C002DB499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5169F441C24C417000D2260 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F59D74E81C40691C002DB499;
+			remoteInfo = "FreeTecWATCH Extension";
+		};
+		F59D74FC1C40691C002DB499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5169F441C24C417000D2260 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F59D74DC1C40691B002DB499;
+			remoteInfo = FreeTecWATCH;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F5694ADA1C3FEB6000FC1E2B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F59D75021C40691C002DB499 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F59D74EA1C40691C002DB499 /* FreeTecWATCH Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F59D75061C40691C002DB499 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F59D74FE1C40691C002DB499 /* FreeTecWATCH.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0F6F427E2E98A4907260C09A /* Pods-FreeTecWATCH Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTecWATCH Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTecWATCH Extension/Pods-FreeTecWATCH Extension.release.xcconfig"; sourceTree = "<group>"; };
+		119A12158EC570C72AE14353 /* libPods-FreeTecWATCH Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FreeTecWATCH Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E8099BE645A51FD2422E003 /* Pods-FreeTec 2016 WatchKit 1 App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTec 2016 WatchKit 1 App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTec 2016 WatchKit 1 App/Pods-FreeTec 2016 WatchKit 1 App.debug.xcconfig"; sourceTree = "<group>"; };
 		5F23852654ACF9A47DE8A17C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7AC8002628F63C83C47BB09C /* Pods-FreeTecWATCH Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTecWATCH Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTecWATCH Extension/Pods-FreeTecWATCH Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		854AD6FBF9ACA25C3EA15350 /* Pods-FreeTec 2016 WatchKit 1 App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTec 2016 WatchKit 1 App.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTec 2016 WatchKit 1 App/Pods-FreeTec 2016 WatchKit 1 App.release.xcconfig"; sourceTree = "<group>"; };
 		87AD4D9CB1DA74E8B7D90190 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B970558CE1FFC49309124B9E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B970C53FD1BD4D9B8A026A0A /* Pods-FreeTec 2016 WatchKit 1 Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTec 2016 WatchKit 1 Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTec 2016 WatchKit 1 Extension/Pods-FreeTec 2016 WatchKit 1 Extension.release.xcconfig"; sourceTree = "<group>"; };
+		C51966F282E8704018020375 /* libPods-FreeTec 2016 WatchKit 1 App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FreeTec 2016 WatchKit 1 App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F00BD5F32373BB4EB78582 /* libPods-FreeTec 2016 WatchKit 1 Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FreeTec 2016 WatchKit 1 Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F502BDE11C40736D006055B1 /* WKListagemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKListagemController.h; sourceTree = "<group>"; };
+		F502BDE21C40736D006055B1 /* WKListagemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKListagemController.m; sourceTree = "<group>"; };
+		F502BDE41C40754A006055B1 /* ListagemRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListagemRow.h; sourceTree = "<group>"; };
+		F502BDE51C40754A006055B1 /* ListagemRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListagemRow.m; sourceTree = "<group>"; };
 		F5169F4C1C24C417000D2260 /* FreeTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5169F501C24C417000D2260 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5169F521C24C417000D2260 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,10 +145,32 @@
 		F5169F8D1C24D0F9000D2260 /* CellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTableView.m; sourceTree = "<group>"; };
 		F53F55BC1C275D7F00A440EF /* CWSBrasilValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSBrasilValidate.h; sourceTree = "<group>"; };
 		F53F55BD1C275D7F00A440EF /* CWSBrasilValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSBrasilValidate.m; sourceTree = "<group>"; };
+		F59D74DD1C40691B002DB499 /* FreeTecWATCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeTecWATCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F59D74E01C40691B002DB499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F59D74E21C40691B002DB499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F59D74E41C40691B002DB499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F59D74E91C40691C002DB499 /* FreeTecWATCH Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FreeTecWATCH Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F59D74EF1C40691C002DB499 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F59D74F01C40691C002DB499 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		F59D74F11C40691C002DB499 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		F59D74F31C40691C002DB499 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		F59D74F41C40691C002DB499 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		F59D74F61C40691C002DB499 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		F59D74F71C40691C002DB499 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		F59D74F91C40691C002DB499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F59D74FB1C40691C002DB499 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F59D75071C4069B2002DB499 /* DaysInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysInterfaceController.m; sourceTree = "<group>"; };
+		F59D75081C4069B2002DB499 /* DaysInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaysInterfaceController.h; sourceTree = "<group>"; };
+		F59D75091C4069B2002DB499 /* DaysRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaysRow.h; sourceTree = "<group>"; };
+		F59D750A1C4069B2002DB499 /* DaysRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysRow.m; sourceTree = "<group>"; };
+		F59D750D1C406C4A002DB499 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		F5B7E4D31C2586690047F42C /* CellColletionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellColletionView.h; sourceTree = "<group>"; };
 		F5B7E4D41C2586690047F42C /* CellColletionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellColletionView.m; sourceTree = "<group>"; };
 		F5B7E4D61C26EC850047F42C /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		F5B7E4D71C26EC850047F42C /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		F5E338A01C417C2F00625F40 /* DetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInterfaceController.h; sourceTree = "<group>"; };
+		F5E338A11C417C2F00625F40 /* DetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInterfaceController.m; sourceTree = "<group>"; };
+		F65D4FFB8660A1531DD43E55 /* Pods-FreeTec 2016 WatchKit 1 Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeTec 2016 WatchKit 1 Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeTec 2016 WatchKit 1 Extension/Pods-FreeTec 2016 WatchKit 1 Extension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +198,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F59D74E61C40691C002DB499 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A434BEBD09DAF6430A8ED1D /* libPods-FreeTecWATCH Extension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,6 +214,12 @@
 			children = (
 				5F23852654ACF9A47DE8A17C /* Pods.debug.xcconfig */,
 				B970558CE1FFC49309124B9E /* Pods.release.xcconfig */,
+				1E8099BE645A51FD2422E003 /* Pods-FreeTec 2016 WatchKit 1 App.debug.xcconfig */,
+				854AD6FBF9ACA25C3EA15350 /* Pods-FreeTec 2016 WatchKit 1 App.release.xcconfig */,
+				F65D4FFB8660A1531DD43E55 /* Pods-FreeTec 2016 WatchKit 1 Extension.debug.xcconfig */,
+				B970C53FD1BD4D9B8A026A0A /* Pods-FreeTec 2016 WatchKit 1 Extension.release.xcconfig */,
+				7AC8002628F63C83C47BB09C /* Pods-FreeTecWATCH Extension.debug.xcconfig */,
+				0F6F427E2E98A4907260C09A /* Pods-FreeTecWATCH Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -116,9 +227,13 @@
 		B1BEB312BA7515756B63F22F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F59D750D1C406C4A002DB499 /* libAFNetworking.a */,
 				F5169F891C24CFBD000D2260 /* PassKit.framework */,
 				F5169F871C24CF8E000D2260 /* MobileCoreServices.framework */,
 				87AD4D9CB1DA74E8B7D90190 /* libPods.a */,
+				C51966F282E8704018020375 /* libPods-FreeTec 2016 WatchKit 1 App.a */,
+				E1F00BD5F32373BB4EB78582 /* libPods-FreeTec 2016 WatchKit 1 Extension.a */,
+				119A12158EC570C72AE14353 /* libPods-FreeTecWATCH Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +244,8 @@
 				F5169F4E1C24C417000D2260 /* FreeTec */,
 				F5169F6B1C24C417000D2260 /* FreeTecTests */,
 				F5169F761C24C417000D2260 /* FreeTecUITests */,
+				F59D74DE1C40691B002DB499 /* FreeTecWATCH */,
+				F59D74ED1C40691C002DB499 /* FreeTecWATCH Extension */,
 				F5169F4D1C24C417000D2260 /* Products */,
 				18D87CFB31D6F781A92CC031 /* Pods */,
 				B1BEB312BA7515756B63F22F /* Frameworks */,
@@ -141,6 +258,8 @@
 				F5169F4C1C24C417000D2260 /* FreeTec.app */,
 				F5169F681C24C417000D2260 /* FreeTecTests.xctest */,
 				F5169F731C24C417000D2260 /* FreeTecUITests.xctest */,
+				F59D74DD1C40691B002DB499 /* FreeTecWATCH.app */,
+				F59D74E91C40691C002DB499 /* FreeTecWATCH Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +316,50 @@
 			path = FreeTecUITests;
 			sourceTree = "<group>";
 		};
+		F59D74DE1C40691B002DB499 /* FreeTecWATCH */ = {
+			isa = PBXGroup;
+			children = (
+				F59D74DF1C40691B002DB499 /* Interface.storyboard */,
+				F59D74E21C40691B002DB499 /* Assets.xcassets */,
+				F59D74E41C40691B002DB499 /* Info.plist */,
+			);
+			path = FreeTecWATCH;
+			sourceTree = "<group>";
+		};
+		F59D74ED1C40691C002DB499 /* FreeTecWATCH Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F59D75071C4069B2002DB499 /* DaysInterfaceController.m */,
+				F59D75081C4069B2002DB499 /* DaysInterfaceController.h */,
+				F59D75091C4069B2002DB499 /* DaysRow.h */,
+				F59D750A1C4069B2002DB499 /* DaysRow.m */,
+				F59D74F01C40691C002DB499 /* InterfaceController.h */,
+				F59D74F11C40691C002DB499 /* InterfaceController.m */,
+				F59D74F31C40691C002DB499 /* ExtensionDelegate.h */,
+				F59D74F41C40691C002DB499 /* ExtensionDelegate.m */,
+				F59D74F61C40691C002DB499 /* NotificationController.h */,
+				F59D74F71C40691C002DB499 /* NotificationController.m */,
+				F59D74F91C40691C002DB499 /* Assets.xcassets */,
+				F59D74FB1C40691C002DB499 /* Info.plist */,
+				F59D74EE1C40691C002DB499 /* Supporting Files */,
+				F502BDE11C40736D006055B1 /* WKListagemController.h */,
+				F502BDE21C40736D006055B1 /* WKListagemController.m */,
+				F502BDE41C40754A006055B1 /* ListagemRow.h */,
+				F502BDE51C40754A006055B1 /* ListagemRow.m */,
+				F5E338A01C417C2F00625F40 /* DetailInterfaceController.h */,
+				F5E338A11C417C2F00625F40 /* DetailInterfaceController.m */,
+			);
+			path = "FreeTecWATCH Extension";
+			sourceTree = "<group>";
+		};
+		F59D74EE1C40691C002DB499 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F59D74EF1C40691C002DB499 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,10 +373,13 @@
 				F5169F4A1C24C417000D2260 /* Resources */,
 				26CAE6233306993801D6779A /* Embed Pods Frameworks */,
 				530C4C5DE5792E23334A6F5B /* Copy Pods Resources */,
+				F5694ADA1C3FEB6000FC1E2B /* Embed App Extensions */,
+				F59D75061C40691C002DB499 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F59D74FD1C40691C002DB499 /* PBXTargetDependency */,
 			);
 			name = FreeTec;
 			productName = FreeTec;
@@ -256,6 +422,43 @@
 			productReference = F5169F731C24C417000D2260 /* FreeTecUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F59D74DC1C40691B002DB499 /* FreeTecWATCH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F59D75031C40691C002DB499 /* Build configuration list for PBXNativeTarget "FreeTecWATCH" */;
+			buildPhases = (
+				F59D74DB1C40691B002DB499 /* Resources */,
+				F59D75021C40691C002DB499 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F59D74EC1C40691C002DB499 /* PBXTargetDependency */,
+			);
+			name = FreeTecWATCH;
+			productName = FreeTecWATCH;
+			productReference = F59D74DD1C40691B002DB499 /* FreeTecWATCH.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F59D74E81C40691C002DB499 /* FreeTecWATCH Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F59D74FF1C40691C002DB499 /* Build configuration list for PBXNativeTarget "FreeTecWATCH Extension" */;
+			buildPhases = (
+				B9E1E33BD7FD78880AF44324 /* Check Pods Manifest.lock */,
+				F59D74E51C40691C002DB499 /* Sources */,
+				F59D74E61C40691C002DB499 /* Frameworks */,
+				F59D74E71C40691C002DB499 /* Resources */,
+				3241E810E3144F9BC4C8C9CC /* Embed Pods Frameworks */,
+				F1040BCF9E10AB26AB7E027E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FreeTecWATCH Extension";
+			productName = "FreeTecWATCH Extension";
+			productReference = F59D74E91C40691C002DB499 /* FreeTecWATCH Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -285,6 +488,14 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = F5169F4B1C24C417000D2260;
 					};
+					F59D74DC1C40691B002DB499 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 82K3TLE3Z9;
+					};
+					F59D74E81C40691C002DB499 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 82K3TLE3Z9;
+					};
 				};
 			};
 			buildConfigurationList = F5169F471C24C417000D2260 /* Build configuration list for PBXProject "FreeTec" */;
@@ -303,6 +514,8 @@
 				F5169F4B1C24C417000D2260 /* FreeTec */,
 				F5169F671C24C417000D2260 /* FreeTecTests */,
 				F5169F721C24C417000D2260 /* FreeTecUITests */,
+				F59D74DC1C40691B002DB499 /* FreeTecWATCH */,
+				F59D74E81C40691C002DB499 /* FreeTecWATCH Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -329,6 +542,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F59D74DB1C40691B002DB499 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59D74E31C40691B002DB499 /* Assets.xcassets in Resources */,
+				F59D74E11C40691B002DB499 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F59D74E71C40691C002DB499 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59D74FA1C40691C002DB499 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +595,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3241E810E3144F9BC4C8C9CC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeTecWATCH Extension/Pods-FreeTecWATCH Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		530C4C5DE5792E23334A6F5B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,6 +623,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9E1E33BD7FD78880AF44324 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1040BCF9E10AB26AB7E027E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeTecWATCH Extension/Pods-FreeTecWATCH Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,6 +689,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F59D74E51C40691C002DB499 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59D74F51C40691C002DB499 /* ExtensionDelegate.m in Sources */,
+				F59D74F21C40691C002DB499 /* InterfaceController.m in Sources */,
+				F59D750B1C4069B2002DB499 /* DaysInterfaceController.m in Sources */,
+				F502BDE31C40736D006055B1 /* WKListagemController.m in Sources */,
+				F59D750C1C4069B2002DB499 /* DaysRow.m in Sources */,
+				F59D74F81C40691C002DB499 /* NotificationController.m in Sources */,
+				F5E338A21C417C2F00625F40 /* DetailInterfaceController.m in Sources */,
+				F502BDE61C40754A006055B1 /* ListagemRow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -426,6 +716,16 @@
 			isa = PBXTargetDependency;
 			target = F5169F4B1C24C417000D2260 /* FreeTec */;
 			targetProxy = F5169F741C24C417000D2260 /* PBXContainerItemProxy */;
+		};
+		F59D74EC1C40691C002DB499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F59D74E81C40691C002DB499 /* FreeTecWATCH Extension */;
+			targetProxy = F59D74EB1C40691C002DB499 /* PBXContainerItemProxy */;
+		};
+		F59D74FD1C40691C002DB499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F59D74DC1C40691B002DB499 /* FreeTecWATCH */;
+			targetProxy = F59D74FC1C40691C002DB499 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -444,6 +744,14 @@
 				F5169F611C24C417000D2260 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F59D74DF1C40691B002DB499 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F59D74E01C40691B002DB499 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -542,6 +850,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -558,6 +867,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -609,6 +919,80 @@
 			};
 			name = Release;
 		};
+		F59D75001C40691C002DB499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC8002628F63C83C47BB09C /* Pods-FreeTecWATCH Extension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "FreeTecWATCH Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		F59D75011C40691C002DB499 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6F427E2E98A4907260C09A /* Pods-FreeTecWATCH Extension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "FreeTecWATCH Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		F59D75041C40691C002DB499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = FreeTecWATCH_Extension;
+				INFOPLIST_FILE = FreeTecWATCH/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		F59D75051C40691C002DB499 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = FreeTecWATCH_Extension;
+				INFOPLIST_FILE = FreeTecWATCH/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = br.comAgenciaSoma.FreeTec.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -644,6 +1028,24 @@
 			buildConfigurations = (
 				F5169F831C24C417000D2260 /* Debug */,
 				F5169F841C24C417000D2260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F59D74FF1C40691C002DB499 /* Build configuration list for PBXNativeTarget "FreeTecWATCH Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F59D75001C40691C002DB499 /* Debug */,
+				F59D75011C40691C002DB499 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F59D75031C40691C002DB499 /* Build configuration list for PBXNativeTarget "FreeTecWATCH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F59D75041C40691C002DB499 /* Debug */,
+				F59D75051C40691C002DB499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

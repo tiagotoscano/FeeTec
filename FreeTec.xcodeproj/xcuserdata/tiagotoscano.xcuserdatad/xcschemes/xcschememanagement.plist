@@ -4,10 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FreeTec 2016 WatchKit 1 App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>FreeTec.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>FreeTecWATCH.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Notification - FreeTec 2016 WatchKit 1 App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Notification - FreeTecWATCH.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +47,16 @@
 			<true/>
 		</dict>
 		<key>F5169F721C24C417000D2260</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5694AC51C3FEB6000FC1E2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F59D74DC1C40691B002DB499</key>
 		<dict>
 			<key>primary</key>
 			<true/>
