@@ -490,7 +490,7 @@
                 [self getDados];
                 
                 replyHandler(@{@"status":@"000",@"retorno":responseObject[0][@"Msg"]});
-            }
+            }else
             
             if ([responseObject[0][@"status"] isEqualToString:@"103"]) {
                 
@@ -498,6 +498,12 @@
                 self.insc_bnt_Update.hidden = NO;
                 replyHandler(@{@"status":@"103",@"retorno":responseObject[0][@"Msg"]});
                 
+            }else{
+            
+                self.insc_bnt_Update.hidden = YES;
+                replyHandler(@{@"status":@"002",@"retorno":responseObject[0][@"Msg"]});
+                
+            
             }
             
             [MBProgressHUD hideAllHUDsForView:self.view animated:YES];

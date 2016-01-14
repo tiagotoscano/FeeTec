@@ -76,6 +76,12 @@
                 [self.bntInsc setTitle:@"Mudar para Este Curso"];
                 [self.bntInsc setEnabled:YES];
                 self.update=@"true";
+            }else{
+                [self.labRet setText:reply[@"retorno"]];
+                [self.bntInsc setTitle:@"Mudar para Este Curso"];
+                [self.bntInsc setEnabled:NO];
+                
+                
             }
             
             
